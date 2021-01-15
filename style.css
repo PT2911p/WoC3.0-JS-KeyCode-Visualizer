@@ -1,0 +1,13 @@
+body{
+    background-color: lightblue;
+}
+th{
+    border: 1px solid lightskyblue;
+    background-color: lightskyblue;
+}
+th,td,table{
+    text-align: center;
+}
+td{
+    border-bottom: 1px solid yellow;
+}
