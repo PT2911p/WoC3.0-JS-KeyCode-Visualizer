@@ -1,0 +1,41 @@
+body{
+    background-color: lightblue;
+    vertical-align: center;
+ color: blue ;
+    scroll-snap-align: center;
+}
+th{
+    border: 1px solid lightskyblue;
+    background-color: lightskyblue;
+}
+td{
+    border-bottom: 1px solid black;
+}
+table,th,td
+{
+    margin-top: 10%;
+    margin-bottom: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+th
+{
+    align-items: center;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;}
+    .my-button
+    {
+    margin-bottom: 2.5vh;
+    margin-left: 45%;
+    margin-right: 60%;
+    }
+    html {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFCC80;
+        text-align: center;
+        font-family: monospace;
+        line-height: 1.4;
+        font-size: 25px;}
