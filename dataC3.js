@@ -1,242 +1,285 @@
-const items1 = [
-{keycode:  "0" ,keyval:'That key has no keycode'},
-{keycode:  "3" ,keyval:'break'},
-{keycode:  "8" ,keyval:'backspace / delete'},
-{keycode:  "9" ,keyval:'tab'},
-{keycode:  "12",keyval: 'clear'},
-{keycode:  "13",keyval: 'enter'},
-{keycode:  "16",keyval: 'shift'},
-{keycode:  "17",keyval: 'ctrl'},
-{keycode:  "18",keyval: 'alt'},
-{keycode:  "19",keyval: 'pause/break'},
-{keycode:  "20",keyval: 'caps lock'},
-{keycode:  "21",keyval: 'hangul'},
-{keycode:  "25",keyval: 'hanja'},
-{keycode:  "27",keyval: 'escape'},
-{keycode:  "28",keyval: 'conversion'},
-{keycode:  "29",keyval: 'non-conversion'},
-{keycode:  "32",keyval: 'spacebar'},
-{keycode:  "33",keyval: 'page up'},
-{keycode:  "34",keyval: 'page down'},
-{keycode:  "35",keyval: 'end'},
-{keycode:  "36",keyval: 'home'},
-{keycode:  "37",keyval: 'left arrow'},
-{keycode:  "38",keyval: 'up arrow'},
-{keycode:  "39",keyval: 'right arrow'},
-{keycode:  "40",keyval: 'down arrow'},
-{keycode:  "41",keyval: 'select'},
-{keycode:  "42",keyval: 'print'},
-{keycode:  "43",keyval: 'execute'},
-{keycode:  "44",keyval: 'Print Screen'},
-{keycode:  "45",keyval: 'insert'},
-{keycode:  "46",keyval: 'delete'},
-{keycode:  "47",keyval: 'help'},
-{keycode:  "48",keyval: '0'},
-{keycode:  "49",keyval: '1'},
-{keycode:  "50",keyval: '2'},
-{keycode:  "51",keyval: '3'},
-{keycode:  "52",keyval: '4'},
-{keycode:  "53",keyval: '5'},
-{keycode:  "54",keyval: '6'},
-{keycode:  "55",keyval: '7'},
-{keycode:  "56",keyval: '8'},
-{keycode:  "57",keyval: '9'},
-{keycode:  "58",keyval: ':'},
-{keycode:  "59",keyval: 'semicolon (firefox), equals'},
-{keycode:  "60",keyval: '<'},
-{keycode:  "61",keyval: 'equals (firefox)'},
-{keycode:  "63",keyval: 'ß'},
-{keycode:  "64",keyval: '@ (firefox)'},
-{keycode:  "65",keyval: 'a'},
-{keycode:  "66",keyval: 'b'},
-{keycode:  "67",keyval: 'c'},
-{keycode:  "68",keyval: 'd'},
-{keycode:  "69",keyval: 'e'},
-{keycode:  "70",keyval: 'f'},
-{keycode:  "71",keyval: 'g'},
-{keycode:  "72",keyval: 'h'},
-{keycode:  "73",keyval: 'i'},
-{keycode:  "74",keyval: 'j'},
-{keycode:  "75",keyval: 'k'},
-{keycode:  "76",keyval: 'l'},
-{keycode:  "77",keyval: 'm'},
-{keycode:  "78",keyval: 'n'},
-{keycode:  "79",keyval: 'o'},
-{keycode:  "80",keyval: 'p'},
-{keycode:  "81",keyval: 'q'},
-{keycode:  "82",keyval: 'r'},
-{keycode:  "83",keyval: 's'},
-{keycode:  "84",keyval: 't'},
-{keycode:  "85",keyval: 'u'},
-{keycode:  "86",keyval: 'v'},
-{keycode:  "87",keyval: 'w'},
-{keycode:  "88",keyval: 'x'},
-{keycode:  "89",keyval: 'y'},
-{keycode:  "90",keyval: 'z'},
-{keycode:  "91",keyval: 'Windows Key / Left ⌘ / Chromebook Search key'},
-{keycode:  "92",keyval: 'right window key'},
-{keycode:  "93",keyval: 'Windows Menu / Right ⌘'},
-{keycode:  "95",keyval: 'sleep'},
-{keycode:  "96",keyval: 'numpad 0'},
-{keycode:  "97",keyval: 'numpad 1'},
-{keycode:  "98",keyval: 'numpad 2'},
-{keycode:  "99",keyval: 'numpad 3'},
-{keycode:  "100",keyval: 'numpad 4'},
-{keycode:  "101",keyval: 'numpad 5'},
-{keycode:  "102",keyval: 'numpad 6'},
-{keycode:  "103",keyval: 'numpad 7'},
-{keycode:  "104",keyval: 'numpad 8'},
-{keycode:  "105",keyval: 'numpad 9'},
-{keycode:  "106",keyval: 'multiply'},
-{keycode:  "107",keyval: 'add'},
-{keycode:  "108",keyval: 'numpad period (firefox)'},
-{keycode:  "109",keyval: 'subtract'},
-{keycode:  "110",keyval: 'decimal point'},
-{keycode:  "111",keyval: 'divide'},
-{keycode:  "112",keyval: 'f1'},
-{keycode:  "113",keyval: 'f2'},
-{keycode:  "114",keyval: 'f3'},
-{keycode:  "115",keyval: 'f4'},
-{keycode:  "116",keyval: 'f5'},
-{keycode:  "117",keyval: 'f6'},
-{keycode:  "118",keyval: 'f7'},
-{keycode:  "119",keyval: 'f8'},
-{keycode:  "120",keyval: 'f9'},
-{keycode:  "121",keyval: 'f10'},
-{keycode:  "122",keyval: 'f11'},
-{keycode:  "123",keyval: 'f12'},
-{keycode:  "124",keyval: 'f13'},
-{keycode:  "125",keyval: 'f14'},
-{keycode:  "126",keyval: 'f15'},
-{keycode:  "127",keyval: 'f16'},
-{keycode:  "128",keyval: 'f17'},
-{keycode:  "129",keyval: 'f18'},
-{keycode:  "130",keyval: 'f19'},
-{keycode:  "131",keyval: 'f20'},
-{keycode:  "132",keyval: 'f21'},
-{keycode:  "133",keyval: 'f22'},
-{keycode:  "134",keyval: 'f23'},
-{keycode:  "135",keyval: 'f24'},
-{keycode:  "136",keyval: 'f25'},
-{keycode:  "137",keyval: 'f26'},
-{keycode:  "138",keyval: 'f27'},
-{keycode:  "139",keyval: 'f28'},
-{keycode:  "140",keyval: 'f29'},
-{keycode:  "141",keyval: 'f30'},
-{keycode:  "142",keyval: 'f31'},
-{keycode:  "143",keyval: 'f32'},
-{keycode:  "144",keyval: 'num lock'},
-{keycode:  "145",keyval: 'scroll lock'},
-{keycode:  "151",keyval: 'airplane mode'},
-{keycode:  "160",keyval: '^'},
-{keycode:  "161",keyval: '!'},
-{keycode:  "162",keyval: '؛ (arabic semicolon)'},
-{keycode:  "163",keyval: '#'},
-{keycode:  "164",keyval: '$'},
-{keycode:  "165",keyval: 'ù'},
-{keycode:  "166",keyval: 'page backward'},
-{keycode:  "167",keyval: 'page forward'},
-{keycode:  "168",keyval: 'refresh'},
-{keycode:  "169",keyval: 'closing paren (AZERTY)'},
-{keycode:  "170",keyval: '*'},
-{keycode:  "171",keyval: '~ + * key'},
-{keycode:  "172",keyval: 'home key'},
-{keycode:  "173",keyval: 'minus (firefox), mute/unmute'},
-{keycode:  "174",keyval: 'decrease volume level'},
-{keycode:  "175",keyval: 'increase volume level'},
-{keycode:  "176",keyval: 'next'},
-{keycode:  "177",keyval: 'previous'},
-{keycode:  "178",keyval: 'stop'},
-{keycode:  "179",keyval: 'play/pause'},
-{keycode:  "180",keyval: 'e-mail'},
-{keycode:  "181",keyval: 'mute/unmute (firefox)'},
-{keycode:  "182",keyval: 'decrease volume level (firefox)'},
-{keycode:  "183",keyval: 'increase volume level (firefox)'},
-{keycode:  "186",keyval: 'semi-colon / ñ'},
-{keycode:  "187",keyval: 'equal sign'},
-{keycode:  "188",keyval: 'comma'},
-{keycode:  "189",keyval: 'dash'},
-{keycode:  "190",keyval: 'period'},
-{keycode:  "191",keyval: 'forward slash / ç'},
-{keycode:  "192",keyval: 'grave accent / ñ / æ / ö'},
-{keycode:  "193",keyval: '?, / or °'},
-{keycode:  "194",keyval: 'numpad period (chrome)'},
-{keycode:  "219",keyval: 'open bracket'},
-{keycode:  "220",keyval: 'back slash'},
-{keycode:  "221",keyval: 'close bracket / å'},
-{keycode:  "222",keyval: 'single quote / ø / ä'},
-{keycode:  "223",keyval: '`'},
-{keycode:  "224",keyval: 'left or right ⌘ key (firefox)'},
-{keycode:  "225",keyval: 'altgr'},
-{keycode:  "226",keyval: '< /git >, left back slash'},
-{keycode:  "230",keyval: 'GNOME Compose Key'},
-{keycode:  "231",keyval: 'ç'},
-{keycode:  "233",keyval: 'XF86Forward'},
-{keycode:  "234",keyval: 'XF86Back'},
-{keycode:  "235",keyval: 'non-conversion'},
-{keycode:  "240",keyval: 'alphanumeric'},
-{keycode:  "242",keyval: 'hiragana/katakana'},
-{keycode:  "243",keyval: 'half-width/full-width'},
-{keycode:  "244",keyval: 'kanji'},
-{keycode:  "251",keyval: 'unlock trackpad (Chrome/Edge)'},
-{keycode:  "255",keyval: 'toggle touchpad'},
-]
-function add_data(items){
-  const table = document.getElementById("add_data_here");
-  items.forEach(item =>{
-    
-    let row = table.insertRow();
-    
-    let code = row.insertCell(0);
-    code.innerHTML=item.keycode;
-    
-    let key = row.insertCell(1);
-    key.innerHTML = item.keyval;
-    
-  }) ;
-}
-
-add_data(items1);
-document.getElementById("head").style.display="none";
-
-var a;
-function show_hide()
-{
-  if(a==1)
-  {
-    document.getElementById("head").style.display="none";
-    return a=0; 
-  }
-  else
-  {
-    document.getElementById("head").style.display="inline";
-    return a=1; 
-  }
-}
-
-
-document.addEventListener("keydown", function (event) {
-  console.log(event);
+const keyCodes = {
+    0: "That key has no keycode",
+    3: "break",
+    8: "backspace / delete",
+    9: "tab",
+    12: "clear",
+    13: "enter",
+    16: "shift",
+    17: "ctrl",
+    18: "alt",
+    19: "pause/break",
+    20: "caps lock",
+    21: "hangul",
+    25: "hanja",
+    27: "escape",
+    28: "conversion",
+    29: "non-conversion",
+    32: "spacebar",
+    33: "page up",
+    34: "page down",
+    35: "end",
+    36: "home",
+    37: "left arrow",
+    38: "up arrow",
+    39: "right arrow",
+    40: "down arrow",
+    41: "select",
+    42: "print",
+    43: "execute",
+    44: "Print Screen",
+    45: "insert",
+    46: "delete",
+    47: "help",
+    48: "0",
+    49: "1",
+    50: "2",
+    51: "3",
+    52: "4",
+    53: "5",
+    54: "6",
+    55: "7",
+    56: "8",
+    57: "9",
+    58: ":",
+    59: "semicolon (firefox), equals",
+    60: "<",
+    61: "equals (firefox)",
+    63: "ß",
+    64: "@ (firefox)",
+    65: "a",
+    66: "b",
+    67: "c",
+    68: "d",
+    69: "e",
+    70: "f",
+    71: "g",
+    72: "h",
+    73: "i",
+    74: "j",
+    75: "k",
+    76: "l",
+    77: "m",
+    78: "n",
+    79: "o",
+    80: "p",
+    81: "q",
+    82: "r",
+    83: "s",
+    84: "t",
+    85: "u",
+    86: "v",
+    87: "w",
+    88: "x",
+    89: "y",
+    90: "z",
+    91: "Windows Key / Left ⌘ / Chromebook Search key",
+    92: "right window key",
+    93: "Windows Menu / Right ⌘",
+    95: "sleep",
+    96: "numpad 0",
+    97: "numpad 1",
+    98: "numpad 2",
+    99: "numpad 3",
+    100: "numpad 4",
+    101: "numpad 5",
+    102: "numpad 6",
+    103: "numpad 7",
+    104: "numpad 8",
+    105: "numpad 9",
+    106: "multiply",
+    107: "add",
+    108: "numpad period (firefox)",
+    109: "subtract",
+    110: "decimal point",
+    111: "divide",
+    112: "f1",
+    113: "f2",
+    114: "f3",
+    115: "f4",
+    116: "f5",
+    117: "f6",
+    118: "f7",
+    119: "f8",
+    120: "f9",
+    121: "f10",
+    122: "f11",
+    123: "f12",
+    124: "f13",
+    125: "f14",
+    126: "f15",
+    127: "f16",
+    128: "f17",
+    129: "f18",
+    130: "f19",
+    131: "f20",
+    132: "f21",
+    133: "f22",
+    134: "f23",
+    135: "f24",
+    136: "f25",
+    137: "f26",
+    138: "f27",
+    139: "f28",
+    140: "f29",
+    141: "f30",
+    142: "f31",
+    143: "f32",
+    144: "num lock",
+    145: "scroll lock",
+    151: "airplane mode",
+    160: "^",
+    161: "!",
+    162: "؛ (arabic semicolon)",
+    163: "#",
+    164: "$",
+    165: "ù",
+    166: "page backward",
+    167: "page forward",
+    168: "refresh",
+    169: "closing paren (AZERTY)",
+    170: "*",
+    171: "~ + * key",
+    172: "home key",
+    173: "minus (firefox), mute/unmute",
+    174: "decrease volume level",
+    175: "increase volume level",
+    176: "next",
+    177: "previous",
+    178: "stop",
+    179: "play/pause",
+    180: "e-mail",
+    181: "mute/unmute (firefox)",
+    182: "decrease volume level (firefox)",
+    183: "increase volume level (firefox)",
+    186: "semi-colon / ñ",
+    187: "equal sign",
+    188: "comma",
+    189: "dash",
+    190: "period",
+    191: "forward slash / ç",
+    192: "grave accent / ñ / æ / ö",
+    193: "?, / or °",
+    194: "numpad period (chrome)",
+    219: "open bracket",
+    220: "back slash",
+    221: "close bracket / å",
+    222: "single quote / ø / ä",
+    223: "`",
+    224: "left or right ⌘ key (firefox)",
+    225: "altgr",
+    226: "< /git >, left back slash",
+    230: "GNOME Compose Key",
+    231: "ç",
+    233: "XF86Forward",
+    234: "XF86Back",
+    235: "non-conversion",
+    240: "alphanumeric",
+    242: "hiragana/katakana",
+    243: "half-width/full-width",
+    244: "kanji",
+    251: "unlock trackpad (Chrome/Edge)",
+    255: "toggle touchpad"
+  };
   
-  document.body.innerHTML =
-  `
-    &nbsp;&nbsp;&nbsp;
-    <b>which: ${event.which}</b>
-    <br>&nbsp;
-    <b>keyCode:</b> ${event.keyCode}
-    <br>&nbsp;&nbsp;&nbsp;
-    <b>shiftKey:</b> ${event.shiftKey}
-    </br>&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>altKey:</b> ${event.altKey}
-    <br>&nbsp;&nbsp;&nbsp;
-    <b>ctrlKey:</b> ${event.ctrlKey}
-    <br>&nbsp;&nbsp;
-    <b>metaKey:</b> ${event.metaKey}
-    <br>
-    &nbsp;&nbsp; 
-    <b>key:</b> ${event.key}<br>`
-    
-});
-
-
-
+  let toggleTableBtn = document.querySelector(".table-toggle-button");
+  let keyCodeDiv = document.querySelector("#keycode");
+  let table = document.querySelector(".table");
+  let toggleThemeBtn = document.querySelector(".toggleTheme");
+  let copyBtn = document.querySelector("#copyBtn");
+  
+  let keycodeDisplay = document.querySelector(".keycode-display");
+  let itemKey = document.querySelector(".item-key .main-description");
+  let itemLocation = document.querySelector(".item-location .main-description");
+  let itemCode = document.querySelector(".item-code .main-description");
+  let itemShiftKey = document.querySelector(".item-shiftKey .main-description");
+  let itemMetaKey = document.querySelector(".item-metaKey .main-description");
+  let itemAltKey = document.querySelector(".item-altKey .main-description");
+  let itemCtrlKey = document.querySelector(".item-ctrlKey .main-description");
+  
+  toggleTableBtn.addEventListener("click", showTable);
+  
+  // displaying table on page load
+  let html = "";
+  
+  for (let [key, val] of Object.entries(keyCodes)) {
+    html += `<tr>
+      <td>${key}</td>
+      <td>${val}</td>
+    </tr>`;
+  }
+  
+  document.querySelector(".table-body").innerHTML = html;
+  
+  function showTable() {
+    toggleTableBtn.classList.add("hidden");
+    keyCodeDiv.classList.add("hidden");
+    copyBtn.classList.add("hidden");
+    table.classList.remove("hidden");
+  }
+  
+  // keydown event
+  window.addEventListener("keydown", (e) => {
+    toggleTableBtn.classList.remove("hidden");
+    keyCodeDiv.classList.remove("hidden");
+    copyBtn.classList.remove("hidden");
+    table.classList.add("hidden");
+  
+    let { code, key, keyCode, location, shiftKey, metaKey, altKey, ctrlKey } = e;
+    // console.log(e);
+  
+    document.querySelector("#copy").value = key;
+  
+    keycodeDisplay.textContent = keyCode;
+    itemCode.textContent = code;
+    itemKey.textContent = key;
+    itemLocation.textContent = location;
+    itemShiftKey.textContent = shiftKey;
+    itemMetaKey.textContent = metaKey;
+    itemAltKey.textContent = altKey;
+    itemCtrlKey.textContent = ctrlKey;
+  });
+  
+  // toggling dark and light mode
+  toggleThemeBtn.addEventListener("click", () => {
+    let currentTheme = document.documentElement.getAttribute("data-theme");
+    let targetTheme = "light";
+  
+    if (currentTheme === "light") {
+      targetTheme = "dark";
+    }
+  
+    document.documentElement.setAttribute("data-theme", targetTheme);
+    localStorage.setItem("theme", targetTheme);
+  });
+  
+  let storedTheme =
+    localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light");
+  if (storedTheme)
+    document.documentElement.setAttribute("data-theme", storedTheme);
+  
+  // copy to clipboard function
+  function copytoClipboard() {
+    var copyText = document.getElementById("copy");
+  
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  
+    document.execCommand("copy");
+  
+    showToast("Copied to clipboard");
+  }
+  
+  document.querySelector("#copyBtn").addEventListener("click", copytoClipboard);
+  
+  let showToast = (text) => {
+    document.querySelector("#toastText").textContent = text;
+    document.querySelector(".toast").style.display = "block";
+    setTimeout(() => {
+      document.querySelector(".toast").style.display = "none";
+    }, 3000);
+  };
+  
