@@ -1,27 +1,115 @@
-  
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="screen" href="styleC3.css" />
-    <title><b>D</b>Document</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Event KeyCodes</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="style.css?v=11072020" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+    />
+    <link rel="icon" href="" />
+  </head>
+
+  <body>
+    <!-- <canvas width="128" height="128" hidden></canvas> -->
+    <div class="display">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Key Code</th>
+            <th>Key</th>
+          </tr>
+        </thead>
+        <tbody class="table-body"></tbody>
+      </table>
+
+      <div
+        id="keycode"
+        class="wrap hidden"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <p class="keycode-display"></p>
+
+        <div class="cards">
+          <div class="card item-key">
+            <div class="card-header">event.key</div>
+            <div class="card-main">
+              <div class="main-description">key</div>
+            </div>
+          </div>
+          <div class="card item-location">
+            <div class="card-header">
+              event.location
+            </div>
+            <div class="card-main">
+              <div class="main-description">location</div>
+            </div>
+          </div>
+
+          <div class="card item-code">
+            <div class="card-header">event.code</div>
+            <div class="card-main">
+              <div class="main-description">code</div>
+            </div>
+          </div>
+          <div class="card item-shiftKey">
+            <div class="card-header">event.shiftKey</div>
+            <div class="card-main">
+              <div class="main-description">code</div>
+            </div>
+          </div>
+          <div class="card item-metaKey">
+            <div class="card-header">event.metaKey</div>
+            <div class="card-main">
+              <div class="main-description">code</div>
+            </div>
+          </div>
+          <div class="card item-altKey">
+            <div class="card-header">event.altKey</div>
+            <div class="card-main">
+              <div class="main-description">code</div>
+            </div>
+          </div>
+          <div class="card item-ctrlKey">
+            <div class="card-header">event.ctrlKey</div>
+            <div class="card-main">
+              <div class="main-description">code</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="table-toggle-button hidden btn">
+      Table
+    </button>
+
+    <button class="toggleTheme btn">toggle</button>
+
+    <input id="copy" type="text" />
+    <button id="copyBtn" class="btn hidden">copy</button>
+
+    <div class="toast" style="display: none;">
+      <span id="toastText"></span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="scripts.js?v=06272019"></script>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "b45decb6c8304abfaafe7d19167b59b5"}'
+    ></script>
+    
+  </body>
 </html>
-</head>
-<body>
-  <h1>WoC3.0 CHECKPOINT 3</h1>
-  <button id="h" onclick="show_hide()">Table</button>
-<table id="head">
-  <thead>
-    <tr>
-      <th>Keycode</th>
-      <th>Key</th>
-    <tr>
-  </thead>          
-  <tbody id="add_data_here"></body> 
-
-    <script  src="dataC3.js"></script>           
-</table> 
-</body>
-
